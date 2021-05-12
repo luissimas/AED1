@@ -1,8 +1,9 @@
 /*
 
 Autor(es): Luís Augusto Simas do Nascimento
+RA: 790828
 Data de Criação: 08/05/2021
-Data de Atualização: 08/05/2021
+Data de Atualização: 12/05/2021
 
 Objetivos: Testar a implementação do TAD Fila.
 
@@ -16,6 +17,7 @@ Objetivos: Testar a implementação do TAD Fila.
 
 using namespace std;
 
+// Cabeçalho da função para imprimir os elementos da fila
 void imprimirFila(const Fila *fila);
 
 // Função principal
@@ -24,7 +26,7 @@ int main(int argc, char *argv[]) {
   int opcao = 0;
 
   while (opcao != 4) {
-    cout << "Opções: " << endl;
+    /* cout << "Opções: " << endl; */
     cout << "[1] Inserir elemento." << endl;
     cout << "[2] Remover elemento." << endl;
     cout << "[3] Imprimir fila." << endl;
@@ -75,7 +77,8 @@ int main(int argc, char *argv[]) {
       break;
     }
     default:
-      cout << "Opção inválida" << endl;;
+      cout << "Opção inválida" << endl;
+      ;
     }
 
     cout << endl;
@@ -84,6 +87,12 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
+/*
+  Os elementos da fila são impressos copiando a fila passada
+  como parâmetro para uma fila auxiliar, cujos elementos serão
+  retirados e exibidos. Dessa forma é possível exibir os elementos
+  sem alterar a fila e utilizando apenas os métodos definidos no TAD.
+*/
 void imprimirFila(const Fila *fila) {
   if (fila->vazia()) {
     cout << "A fila está vazia!" << endl;
