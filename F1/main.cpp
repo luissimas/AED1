@@ -63,8 +63,9 @@ int main(int argc, char *argv[]) {
       break;
     }
     case 3: {
+      cout << "Elementos da fila: " << endl;
       imprimirFila(&fila);
-      cout << "Digite qualquer tecla para continuar...";
+      cout << "Digite ENTER para continuar...";
       getchar();
       getchar();
       break;
@@ -76,6 +77,8 @@ int main(int argc, char *argv[]) {
     default:
       cout << "Opção inválida" << endl;;
     }
+
+    cout << endl;
   }
 
   return 0;
@@ -96,7 +99,9 @@ void imprimirFila(const Fila *fila) {
 
   while (!filaAux.vazia()) {
     if (filaAux.retirar(elemento)) {
-      cout << *elemento << endl;
+      cout << *elemento << "   ";
     }
   }
+
+  cout << endl;
 }
