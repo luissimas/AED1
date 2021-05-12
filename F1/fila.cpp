@@ -23,14 +23,14 @@ bool Fila::cheia() const {
   return ((primeiro == ultimo) && (ultimaOperacao == insercao));
 }
 
-bool Fila::inserir(elementoFila &elemento) {
+bool Fila::inserir(elementoFila *elemento) {
   if (cheia()) {
     return false;
   }
 
   int lengthElementos = (sizeof(elementos) / sizeof(elementoFila));
 
-  elementos[ultimo] = elemento;
+  elementos[ultimo] = *elemento;
 
   if (ultimo == (lengthElementos - 1)) {
     ultimo = 0;
@@ -43,14 +43,14 @@ bool Fila::inserir(elementoFila &elemento) {
   return true;
 }
 
-bool Fila::retirar(elementoFila &elemento) {
+bool Fila::retirar(elementoFila *elemento) {
   if (vazia()) {
     return false;
   }
 
   int lengthElementos = (sizeof(elementos) / sizeof(elementoFila));
 
-  elemento = elementos[primeiro];
+  *elemento = elementos[primeiro];
 
   if (primeiro == (lengthElementos - 1)) {
     primeiro = 0;

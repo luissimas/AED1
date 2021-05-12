@@ -50,10 +50,10 @@ public:
   bool cheia() const;
 
   // Insere um elemento na fila e retorna um bool indicando sucesso/fracasso
-  bool inserir(elementoFila &elemento);
+  bool inserir(elementoFila *elemento);
 
   // Remove um elemento da fila e o retorna por referência, também retorna um bool indicando sucesso/fracasso
-  bool retirar(elementoFila &elemento);
+  bool retirar(elementoFila *elemento);
 };
 
 #endif
