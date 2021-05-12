@@ -1,5 +1,5 @@
 # AED1
-Repositório compilando
+Repositório para organizar as atividades de AED1.
 
 ## How to
 1. Clone esse repositório `git clone https://github.com/luissimas/AED1.git`.
