@@ -24,12 +24,10 @@ void Pessoa::setNome(string _nome) { nome = _nome; }
 void Pessoa::setIdade(int _idade) { idade = _idade; }
 
 bool Pessoa::operator>(const Pessoa &operando) {
-  /* return true; */
   return (this->idade > operando.getIdade());
 }
 
 bool Pessoa::operator<(const Pessoa &operando) {
-  return true;
   return (this->idade < operando.getIdade());
 }
 
