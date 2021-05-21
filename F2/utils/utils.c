@@ -12,7 +12,6 @@ Objetivos: Implementar os métodos de utilidade
 // Arquivo de cabeçalho
 #include "utils.h"
 
-
 void printStack(Stack *stack){
   Stack stackAux;
   stackElement element;
