@@ -34,8 +34,6 @@ bool Queue<elementType>::push(elementType *element) {
 
   do {
     // A lista respeita a ordem decrescente dos elementos
-    // 70
-    // 75 54 47 34
     // Caso o elemento tenha sido encontrado ou tenhamos chego ao final da lista
     if (*element > BaseList<elementType>::getCurrent()->getData()) {
       found = true;
